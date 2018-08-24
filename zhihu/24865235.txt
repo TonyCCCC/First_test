@@ -1,0 +1,119 @@
+0、前言
+有不少初学者会问，Python 写的程序看起来好丑啊，只能在那个黑黑的框里运行吗？隔壁家的 JS 好像挺好看的，还能有酷炫效果呢……
+其实呢，术业有专攻，Python 擅长的领域在后台服务器、数据处理、科学计算等方面，以及作为一种工具，搞定各种可以自动化的事情。做界面并不是它的优势项目。但即便如此，本可以靠实力的 Python，偏偏也能靠脸走出一片天。
+从诞生伊始，就有许多优秀的 GUI 工具集整合到 Python 当中，这些优秀的 GUI 工具集，使得 Python 也可以在图形界面编程领域当中大展身手。而由于 Python 的流行，也从而产生了许多由 Python 结合那些优秀的 GUI 工具集编写的应用程序。
+今天我们简单分享一些 Python 的图形化界面库及其相关资源，供广大学习者参考。
+本文涉及的，也是现今主流的 Python 图形化界面主要有以下几种：
+Tkinter
+PyQt
+wxPython
+PyGTK
+PySide
+Kivy
+1、Tkinter
+Tkinter 内置于 Python。没错，Tkinter 姓赵。是与 Tk/Tcl 关系最密切的图形库，历史悠久、用户广泛。跨平台运行，支持 windows/macOS/Linux。由于内置，就不用考虑 Python 版本问题了，也算是一大优势。
+下面是一些 demo：
+Python发邮件实例，并用Tkinter实现UI - 推酷
+ 
+用 Tkinter 编写交互日记系统
+Tkinter 学习资源：
+Python GUI编程(Tkinter) - 中文教程易佰
+ 
+Introduction to Tkinter - 英文教程zetcode
+ 
+官方文档 py2
+ 
+官方文档 py3
+基于Tkinter的姻缘测试器
+2、PyQt
+PyQt 是 Qt 的 Python 版本，Qt 库是最强大的 GUI 库之一，PyQt 有超过620个类以及6000种函数。我想数据已经能表现PyQt的强大了吧！该库适用于 Python2 和 Python3，能在所有桌面平台运行。
+demo：
+某大神的仿虾米音乐界面
+ 
+某大神的仿网易云播放器
+学习资源：
+官方文档
+ 
+pyqt4 中文文档
+pyqt4 英文教程
+pyqt5 英文教程
+有哪些颜值高的 PyQt/Qt 应用？- 知乎
+ 
+基于PyQt或PySide开发图形化界面
+ 
+3、wxPython
+wxPython 使用 C++ 编写，是目前比较流行的替代 Tkinter 的图形界面，比 Tkinter 重但又比 PyQt 轻。官网上赫然挂着醒目的一句话：
+Why the hell hasn't wxPython become the standard GUI for Python yet?
+wxPython 在主流的三大桌面平台都有不错的表现，但目前仅支持 Python2，Python3 需安装 wxPython_phoenix。
+demo：
+一个简单的记事本软件
+ 
+python+wxpython 写的音乐播放器
+学习资源：
+英文教程
+官方教程
+wxpython in action
+github: ubbn/wxPython
+github: wxWidgets/wxPython
+4、PyGTK
+PyGTK 基于 GTK+ 开发，它提供了一套全面的图形元素创建桌面程序。易用、适合快速原型，许多 Gnome 下的著名应用程序的 GUI 都是使用 PyGTK 实现的，比如 BitTorrent、GIMP
+和 Gedit。跨桌面平台，但只能在 Python2 上使用，另外该库最后更新日期是 2012 年。
+demo：
+PyGTK 做的 Linux Server 管理毕业设计
+学习资源：
+英文教程
+官方文档
+github: majorsilence/pygtknotebook
+5、PySide
+基于 Qt 框架，类似于 PyQt。在 2009 年由 NOKIA 发布，现在由 Riverbank Computing 维护。跨桌面平台，甚至支持 Android 和 Symbian 。PySide 有 15 个模块，这些模块提供了强大的工具来处理 GUI，多媒体，XML 文档，网络或数据库。
+demo：
+python版弹幕姬
+学习资源：
+英文教程
+Intro to PySide/PyQt: Basic Widgets and Hello, World! - Python Central
+官方教程
+ 
+PySide图形界面开发（一） - bamb00 - 博客园
+ 
+PySide--Python图形化界面入门教程（一） - ASCII0x03 - 博客园
+github: pyside/Examples
+github: shuge/Qt-Python-Binding-Examples
+6、Kivy
+Kivy 于 2011 年发布，现在依然在不断更新。它最大的优点是不但可以在桌面平台上运行，还可以在移动设备上运行，包括 Android、iOS，甚至是树莓派。而且，Kivy 可以看作许多模块的超集：许多知名的模块如 PyGame、SDL、GStreamer 都是 Kivy 的组成部分。Kivy 的 API更加高级、统一，方便使用。
+游戏 Deflectouch
+ 
+游戏 FishLife
+ 
+学习资料：
+官网
+源码
+用于NUI开发的Python框架：Kivy - OPEN 开发经验库
+7、后记
+以上就是 Python 常见的 GUI 库。在编程教室公众号（crossincode）上做了个小调查：以上几个，你正在使用的、打算使用的、或看着比较顺眼 GUI 是哪一个？公众号内回复 
+gui
+ 可参与。得票较多的，我们将继续做更深入的介绍。
+其他文章及回答：
+学习编程的过程中可能会走哪些弯路，有哪些经验可以参考？ - Crossin 的回答
+ 
+你是如何自学 Python 的？ - Crossin 的回答
+ 
+今天，你抢到票了吗 - Crossin的编程教室 - 知乎专栏
+ 
+Python 与 Excel 不得不说的事 - Crossin的编程教室 - 知乎专栏
+ 
+Python-Excel 模块哪家强？- Crossin的编程教室 - 知乎专栏
+ 
+爆款游戏《贪吃蛇大作战》的 Python 实现 - Crossin的编程教室 - 知乎专栏
+ 
+NBA 举办编程马拉松 - 数据分析时代的到来 - Crossin的文章 - 知乎专栏
+ 
+想用 Python 做数据分析？先玩玩这个再说 - Crossin的文章 - 知乎专栏
+ 
+用 Python 实现你的量化交易策略 - Crossin的文章 - 知乎专栏
+ 
+Python 抓取网页乱码原因分析 - Crossin的编程教室 - 知乎专栏
+ 
+Crossin的编程教室
+微信ID：crossincode
+论坛：
+Crossin的编程教室

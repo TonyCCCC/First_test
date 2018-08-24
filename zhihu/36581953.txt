@@ -1,0 +1,86 @@
+有不少同学学习 Python 的原因是对人工智能感兴趣，有志于从事相关行业。今天我们来聊聊这个方向所需要的一些技能。
+这里我们主要谈论的是编程技能。
+如果你打算采用 Python 作为主要开发语言（这也是目前人工智能领域的主流），那么 
+Python 的开发基础
+是必须得掌握的，这是一切基于 Python 开发的根基。你得对 Python 的基本语法、数据类型、常见模块有所了解，能正确使用条件、循环等逻辑，掌握 list、dict 等数据结构及其常用操作，了解函数、模块、面向对象的概念和使用等等。
+关于这方面，我们已经有过不少介绍，可以参考之前的文章：
+Crossin：给伸手党的福利：Python 新手入门引导
+​
+zhuanlan.zhihu.com
+或者看我的零基础教程：
+Crossin的编程教室 - Python入门
+在对此已经熟练之后，你需要学习
+数据处理相关的 Python 工具库
+：
+NumPy
+NumPy 提供了许多数学计算的数据结构和方法，较 Python 自身的 list 效率高很多。它提供的 ndarray 大大简化了矩阵运算。
+Pandas
+基于 NumPy 实现的数据处理工具。提供了大量数据统计、分析方面的模型和方法。一维的 Series，二维的 DataFrame 和三维的 Panel 是其主要的数据结构。
+SciPy
+进行科学计算的 Python 工具包，提供了诸如微积分、线性代数、信号处理、傅里叶变换、曲线拟合等众多方法。
+Matplotlib
+Python 最基础的绘图工具。功能丰富，定制性强，几乎可满足日常各类绘图需求，但配置较复杂。
+只要你用 Python 和数据打交道，就绕不开以上这几个库，所以务必学习一下。
+而在此之后，你就需要根据自己的具体方向，选择更专业的工具包进行研究和应用。
+Python 在人工智能方面最有名的工具库
+主要有：
+Scikit-Learn
+http://
+scikit-learn.org
+Scikit-Learn 是用 Python 开发的机器学习库，其中包含大量机器学习算法、数据集，是数据挖掘方便的工具。它基于 NumPy、SciPy 和 Matplotlib，可直接通过 pip 安装。
+TensorFlow
+http://
+tensorflow.org
+TensorFlow 最初由 Google 开发，用于机器学习的研究。TensorFlow 可以在 GPU 或 CPU 上运行，在深度学习领域表现优异。目前无论是在学术研究还是工程应用中都被广泛使用。但 TensorFlow 相对来说更底层，更多时候我们会使用基于它开发的其他框架。
+Theano
+http://
+deeplearning.net/softwa
+re/theano/
+Theano 是成熟而稳定的深度学习库。与 TensorFlow 类似，它是一个比较底层的库，适合数值计算优化，支持 GPU 编程。有很多基于 Theano 的库都在利用其数据结构，但对于开发来说，它的接口并不是很友好。
+Keras
+http://
+keras.io
+Keras 是一个高度模块化的神经网络库，用 Python 编写，能够在 TensorFlow 或 Theano 上运行。它的接口非常简单易用，大大提升了开发效率。
+Caffe
+http://
+caffe.berkeleyvision.org
+Caffe 在深度学习领域名气很大。它由伯克利视觉和学习中心（BVLC）和社区贡献者开发，具有模块化、高性能的优点，尤其在计算机视觉领域有极大的优势。Caffe 本身并不是一个 Python 库，但它提供了 Python 的接口。
+PyTorch
+http://
+pytorch.org
+Torch 也是一个老牌机器学习库。Facebook 人工智能研究所用的框架是 Torch，DeepMind 在被谷歌收购之前用的也是 Torch（后转为 TensorFlow），足见其能力。但因 Lua 语言导致其不够大众。直到它的 Python 实现版本 PyTorch 的出现。
+MXNet
+http://
+mxnet.incubator.apache.org
+亚马逊 AWS 的默认深度学习引擎，分布式计算是它的特色之一，支持多个 CPU/GPU 训练网络。
+借助这些强大的工具，你已经可以使用各种经典的模型，对数据集进行训练和预测。但想成为一名合格的人工智能开发者，仅仅会调用工具的 API 和调参数是远远不够的。
+Python 是人工智能开发的重要工具，编程是此方向的必备技能。但并不是掌握 Python 就掌握了人工智能。人工智能的核心是
+机器学习
+（Machine Learning）和
+深度学习
+。而它们的
+基础是数学
+（高等数学/线性代数/概率论等），编程是实现手段。
+所以你想要进入这个领域，除了
+编程技能
+外，
+数学基础
+必不可少，然后还要去了解
+数据挖掘、机器学习、深度学习
+等知识。
+这不是条几个月就能速成的路，但坚持下去一定会有所收获。
+════
+其他文章及回答：
+如何自学Python
+ | 
+新手引导
+ | 
+精选
+Python
+问答
+ | 
+Python单词表
+ | 
+区块链
+欢迎关注：
+Crossin的编程教室

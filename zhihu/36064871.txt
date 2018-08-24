@@ -1,0 +1,189 @@
+有不少编程初学者会问这样一个问题：
+我英语不好，还能不能学编程？会不会有影响？
+ 
+我的回答是：
+能，会。
+能学，是因为虽然编程用的都是英语，但翻来覆去就那么一些关键字，写一阵子就都记住了。中文的学习资料也不少，足够学会。
+但肯定会有影响，主要有几点：
+看不懂
+报错信息
+看不懂
+官方文档
+，只能看别人翻译的二手货。翻译版本不能准确传达意思不说，很多前沿技术的版本更新速度也比翻译的速度快多了。你看 Django 就从来没有一个中文版本能跟上的。
+看不懂 
+StackOverflow
+ 上的问答
+无法使用参与 
+Github
+ 上的项目
+没法好好用 
+Google
+（当然这不仅是英语问题）
+总结下来就是：
+可以学，但会吃力，尤其在更进一步提升时会有限制。而如果英语好，则事半功倍。
+而英语本身的作用也不仅仅是对编程帮助。多花点时间学英语，哪怕仅仅多背一些单词也是有用的。
+于是，为了让编程小白+英语苦手在开始时能有些方向，我们尝试用程序整理了一份
+Python 高频词汇表
+，供参考。
+网页演示地址：
+Crossin的编程教室-Python必背单词整理
+ 
+扇贝单词本
+（可导入你的扇贝单词使用）和项目完整
+代码
+及说明
+文档、单词列表
+，请在公众号（
+Crossin的编程教室
+）回复 
+背单词
+，获取地址。
+【关于这份词汇表的说明】
+内容来源包括
+《Head First Python》、《Learn Python The Hard Way》、《Python for Data Analysis》等20多本Python书籍；
+Python 官方文档、pandas、requests、django 等10份文档；
+Github awesome-python 项目下近400个项目的 readme 说明；
+stackoverflow 下 Python 及常用库的问答 topics 400+ 回答等资源。
+通过程序从中采集了词频最高的单词，再加上人工筛选，最终整理出近 2000 个单词。
+需要指出的是，单词的中文释义我们使用了金山的翻译接口。但某些词汇在计算机和编程领域有特殊的含义，翻译接口未必能够给出，所以会存在一定的问题。对此，我们在自建的网页版工具上提供了“
+用户自定义解释
+”的接口，供大家修正和补充解释。如果遇到解释不到位的单词，欢迎各位提交补充。（但扇贝上已提交的单词本暂无法修改释义）
+【程序的实现方法
+ 】
+1. 文档抓取
+4 个不同渠道来源，通过 
+requests + BeautifulSoup
+ 实现。
+2. 词频统计
+用到了之前提过的 
+Counter
+ 类。可参考 
+【编程课堂】计数器 Counter
+import
+ 
+re
+
+
+from
+ 
+collections
+ 
+import
+ 
+Counter
+
+
+# 打开文件，读取数据
+
+
+with
+ 
+open
+(
+filename
+,
+ 
+'r'
+,
+ 
+encoding
+=
+'utf-8'
+)
+ 
+as
+ 
+f
+:
+
+    
+raw_words
+ 
+=
+ 
+f
+.
+read
+()
+
+
+# 正则匹配所有单词
+
+
+words
+ 
+=
+ 
+re
+.
+findall
+(
+'[a-z]+'
+,
+ 
+raw_words
+.
+lower
+())
+
+
+# 统计单词
+
+
+c
+ 
+=
+ 
+Counter
+(
+words
+)
+
+
+# 提取出前词频前 100 的单词
+
+
+c
+.
+most_common
+(
+100
+)
+
+
+3. 翻译接口
+使用了
+金山的API
+。
+import requests
+# 请求API
+url = 'http://www.iciba.com/index.php?a=getWordMean&c=search&word=' + word
+req = requests.get(url)
+# 处理返回的JSON数据
+info = req.json()
+data = info['baesInfo']['symbols'][0]
+means = data['parts'][0]['means']
+
+4. 网站展示
+网站基于 
+django
+ 搭建。数据的导入使用了 
+peewee
+ 库，直接与 django 的 ORM 对接。
+网页演示地址：
+Crossin的编程教室-Python必背单词整理
+完整的代码和更详细说明可在 Github 的项目中查看。
+在公众号回复 
+背单词
+，可获取扇贝单词本地址和项目完整代码、单词表及说明文档。
+════
+其他文章及回答：
+如何自学Python
+ | 
+新手引导
+ | 
+精选
+Python
+问答
+欢迎关注：
+Crossin的编程教室

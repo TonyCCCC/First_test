@@ -1,0 +1,116 @@
+还有多少耿直boy和我一样在等待微信官方送上一顶圣诞帽？
+最后知道真相的我眼泪掉下来……
+（还蒙在鼓里的同学请在微信最上方的搜索栏自行搜索『圣诞帽』）
+好吧，你不给，咱自己来，不就是个帽子嘛。
+Python 在手，圣诞帽我有！
+OpenCV 库
+加上几张圣诞帽图片，三四十行代码轻松搞定。只不过调试的时候要注意点，图像坐标和像素矩阵索引的维度别搞乱了。
+大致步骤：
+安装 OpenCV（网上搜下教程有很多）；
+用 OpenCV 提供的级联分类器做
+人脸检测
+，定位出图片中的人脸位置；
+根据找出的人脸，调整圣诞帽的位置和大小，叠加到原图片上；
+遍历所有人脸，重复执行步骤3，过程中可随机变换帽子的样式；
+保存图片。
+OpenCV 人脸检测代码：
+import
+ 
+cv2
+
+
+
+# OpenCV 人脸检测
+
+
+face_patterns
+ 
+=
+ 
+cv2
+.
+CascadeClassifier
+(
+
+    
+'haarcascade_frontalface_default.xml'
+
+
+)
+
+
+sample_image
+ 
+=
+ 
+cv2
+.
+imread
+(
+'img/face2.jpg'
+)
+
+
+faces
+ 
+=
+ 
+face_patterns
+.
+detectMultiScale
+(
+
+    
+sample_image
+,
+
+    
+scaleFactor
+=
+1.1
+,
+
+    
+minNeighbors
+=
+8
+,
+
+    
+minSize
+=
+(
+50
+,
+ 
+50
+)
+
+
+)
+
+
+源代码已上传，公众号（
+Crossin的编程教室
+）中回复 
+圣诞帽
+ 可获取下载地址。
+════
+其他文章及回答：
+一名python学习者打开双11的正确姿势
+ 
+Python有嘻哈：Crossin教你用代码写出押韵的verse
+ 
+喏，你们要的 PyCharm 快速上手指南
+  
+给伸手党的福利：Python 新手入门引导
+  
+学习编程的过程中可能会走哪些弯路，有哪些经验可以参考？
+  
+你是如何自学 Python 的？
+Crossin的编程教室
+微信公众号ID：crossincode
+网站：
+crossincode.com
+论坛：
+bbs.crossincode.com

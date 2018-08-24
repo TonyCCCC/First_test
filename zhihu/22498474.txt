@@ -1,0 +1,108 @@
+本系列文章：
+用 GitHub + Hexo 建立你的第一个博客 - Crossin的编程教室 - 知乎专栏
+Hexo(2)-部署博客及更新博文
+Hexo(3)-安装自己喜欢的主题
+Hexo(4)-安装多说评论框
+Hexo(5)-购买并绑定域名
+将本地文件部署到 GitHub
+修改 Hexo 中的 _config.yml 文件
+在 Hexo 文件夹下找到 _config.yml 文件,如下图所示：
+找到其中的 deploy 标签，改成下图所示形式，并保存。注意：冒号后面要加上一个空格，否则会报错。
+将其 deploy 到仓库中
+打开 Git Shell 进入创建的文件夹，依次输入以下命令：
+hexo clean
+hexo generate
+hexo deploy
+
+如果出现下图错误，不要着急：
+将deploy 的 type 改成 git，然后再在 Git Shell 中运行以下命令:
+npm install hexo-deployer-git --save
+
+再重新来一遍：
+hexo clean
+hexo generate
+hexo deploy
+
+出现以下提示则表示正确：
+恭喜，到这一步，个人博客就已经部署到 GitHub 上了，你可以到你的GitHub仓库查看是否已经更新。此时，通过
+http://
+your_user_name.github.io
+（即你那个仓库的名称，形如："你的 GitHub 用户名".
+http://
+github.io
+）
+就可以看到你的个人博客了。
+注意：这里可能会出现这种需要输入账号密码的情况
+输入github的账号密码就可以了，记住那里输入密码的时候光标是不会移动的，只要你输入了就好，不要以为没输入上：）
+发表博文
+辛苦了这么久，终于回到我们搭建博客最初的目标–写作，现在来看看怎么写博文并发表吧(^__^)。
+新建博文
+我们可以使用命令新建一篇博文,使用 Git Shell 进入 Hexo 文件夹，输入以下命令：
+hexo new "文章题目"
+
+命令执行完后，就会发现在
+Hexo\source_posts
+目录中多了一个文件博文名.md，这就是我们刚才新建的博文。
+此外，我们也可以直接进入
+Hexo\source_posts
+目录中，右键新建一个文本文档，将名字改为博文名.md，这样也新建了一篇博文。
+新建页面
+上面新建的博文是显示在单个文章界面，这里新建的页面是作为单个页面显示的，比如下图的分类、标签、归档和关于我，你点击后都是显示为单个页面。
+你只需要记住新建博文是用上面的方法，新建页面是用这里的方法就行了，这里也采用命令新建页面：
+hexo new page "页面名称"
+
+命令执行完后，就会发现在在
+Hexo\source
+目录中多了一个文件夹，里面还有一个index.md，这就代表我们新建了一个页面。
+写博文
+用文本编辑器打开上面新建的博文，如下图所示：
+新建的页面略有不同，没有tags和categories标签。
+三个”-“后面就是博文的正文内容，接下来就是正儿八经地撰写博文了。
+Markdown
+因为我们的博文都是用Markdown语言写的，所以首先，你需要一个好用的Markdown编辑器。其实好用的Markdown编辑器一大堆，这里就给大家推荐两个，如果你用的不习惯也可以换其它的。
+本地编辑器：Haroopad，非常小众的一款Markdown编辑器，左边编辑右边实时预览效果，非常轻便；
+在线编辑器：MaHua，也是比较小众的一款Markdown编辑器，但效果确实很棒，我的这篇博文就是用MaHua写的。
+现在你可以打开新建的博文了，然而还不造怎么下手对吧。其实很简单，除了特殊格式，其它的你就当做在word里面写文章就行了，具体请看这里的Markdown教程：
+Markdown——入门指南
+发博文
+呼啦啦，博文写好了，你得发表出去别人才看得到呀。依然在 Git Shell 中进入 Hexo 文件夹，执行下面几条命令，将博客部署到 GitHub 上：
+hexo clean
+hexo generate
+(若要本地预览就先执行 hexo server)
+hexo deploy
+
+快捷命令：
+hexo g == hexo generate
+hexo d == hexo deploy
+hexo s == hexo server
+hexo n == hexo new
+
+还能组合使用，如：
+hexo d -g
+
+刷新你的个人博客，就可以看到新鲜出炉的博文了，赶紧邀请小伙伴们来欣赏吧。
+两个可能出现的错误
+spawn git ENOENT
+
+解决方法在这里：
+spawn git ENOENT解决方法
+头像图片无法显示：
+hexo头像无法显示【解决办法】
+本系列其余几篇文章，已在文章开头的链接中给出。欢迎进入公众号阅读。
+如果有其他疑问，也欢迎在本教室论坛的主题贴中讨论：
+用 GitHub + Hexo 建立你的第一个博客
+其他文章及回答：
+想用 Python 做数据分析？先玩玩这个再说 - Crossin的文章 - 知乎专栏
+用 Python 实现你的量化交易策略 - Crossin的文章 - 知乎专栏
+学习编程的过程中可能会走哪些弯路，有哪些经验可以参考？ - Crossin 的回答
+你是如何自学 Python 的？ - Crossin 的回答
+编程初学者如何使用搜索引擎 - Crossin的文章 - 知乎专栏
+如何直观地理解程序的运行过程？- Crossin的文章 - 知乎专栏
+如何在 Python 中使用断点调试 - Crossin的文章 - 知乎专栏
+Python 抓取网页乱码原因分析 - Crossin的编程教室 - 知乎专栏
+极简 Github 上手教程 - Crossin的编程教室 - 知乎专栏
+Crossin的编程教室
+微信ID：crossincode
+论坛：
+Crossin的编程教室
+QQ群：521603553
